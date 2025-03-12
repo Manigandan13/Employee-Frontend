@@ -1,0 +1,116 @@
+.p-c{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.payroll-container{
+   background-color: #fff;
+   padding:40px 60px;
+   border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   overflow: hidden;
+   animation: slideUp 0.6s ease-out;
+ }
+ .payroll-container:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ }
+
+ label {
+   display: block;
+   margin-bottom: 10px;
+   color: #555;
+   font-size: 16px;
+ }
+ 
+ .pay-inp[type="text"] {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 20px;
+   border: 2px solid #ccc;
+   border-radius: 8px;
+   font-size: 16px;
+   transition: border-color 0.3s ease;
+ }
+ 
+ .pay-inp[type="text"]:focus {
+   border-color: #4CAF50;
+   outline: none;
+ }
+ 
+ .p-btn {
+   background-color: #4CAF50;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 8px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+   margin-right: 10px;
+ }
+ 
+ .p-btn:hover {
+   background-color: #45a049;
+   transform: translateY(-2px);
+ }
+ 
+ .p-btn:active {
+   transform: translateY(1px);
+ }
+ 
+ /* Error message styling */
+ .payroll-container[style*="color: red"] {
+   color: red;
+   font-size: 16px;
+   margin-top: 15px;
+   font-weight: bold;
+ }
+ 
+ /* Animations for the content */
+ @keyframes slideUp {
+   0% {
+     opacity: 0;
+     transform: translateY(30px);
+   }
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ .p-btn:first-child{
+   background-color: #007AFF;
+ }
+ .p-btn:last-child{
+   background-color: #333333;
+ }
+ .p-btn:nth-child(2){
+   background-color: #FF3B30;
+ }
+ 
+ 
+ .payroll-container-1{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction:column;
+   gap: 20px;
+ }
+
+ .payroll-container-2 label input{
+   margin-top: 20px;
+ }
+ .payroll-container-2 label{
+   margin-top:30px;
+ }
+.pt{
+ font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+}

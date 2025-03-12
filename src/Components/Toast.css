@@ -1,0 +1,57 @@
+.toast {
+  position: fixed; /* Fixed positioning to keep the toast in place */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the toast */
+  padding: 15px 20px; /* Padding around the toast content */
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 9999; /* Ensure it stays above other elements */
+  display: flex;
+  justify-content: space-between; /* Space between message and close button */
+  align-items: center;
+  max-width: 500px; /* Max width of the toast */
+  width: 100%; /* Full width up to the max-width */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.toast-content {
+  display: flex;
+  justify-content: space-between; /* Ensures the message and close button are spaced properly */
+  width: 100%; /* Allow message and button to use full width */
+}
+
+.toast p {
+  margin: 0; /* Remove any default margins from the paragraph */
+  flex-grow: 1; /* Allow the message to take up all available space */
+  word-wrap: break-word; /* Prevent words from overflowing */
+}
+
+.toast.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.toast.error {
+  background-color: #f44336;
+  color: white;
+}
+
+.toast.warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1; 
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}

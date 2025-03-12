@@ -1,0 +1,285 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+/* Home Container Styling */
+.home-container {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  background: linear-gradient(135deg, rgba(255, 204, 204, 0.6), rgba(204, 255, 204, 0.6));
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Heading */
+.heading, .EAM-Heading {
+  color: #000000;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 30px;
+}
+
+.EAM-Heading {
+  margin-top: 40px;
+}
+
+/* Glassmorphism Effect */
+.employee-table {
+  width: 90%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.employee-table th, .employee-table td {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.employee-table td {
+  cursor: pointer;
+}
+
+.employee-table th {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.employee-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.employee-table tbody tr {
+  transition: transform 0.3s ease;
+}
+
+.employee-image-1 img {
+  border-radius: 50%;
+  border: 1px solid black;
+  object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .employee-table {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .employee-table th, .employee-table td {
+    padding: 10px;
+  }
+
+  .home-container h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Adjusting the Table */
+  .employee-table td {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust Heading size */
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .employee-table th, .employee-table td {
+    padding: 8px;
+  }
+
+  .home-container h1 {
+    font-size: 1.2rem;
+  }
+
+  /* Adjust Heading size */
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  /* Reduce table font size on small screens */
+  .employee-table td {
+    font-size: 0.8rem;
+  }
+}
+
+/* Employee Container */
+.employee-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(135deg, rgba(255, 204, 204, 0.6), rgba(204, 255, 204, 0.6));
+  padding: 20px;
+}
+
+/* Employee Card */
+.employee-card2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.2); /* Glassmorphism */
+  backdrop-filter: blur(12px); /* Glassmorphism effect */
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* Card Hover Animation */
+.employee-card2:hover {
+  transform: translateY(-10px);
+}
+
+/* Image Container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.employee-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Image Hover Animation */
+.employee-image:hover {
+  transform: scale(1.05);
+}
+
+/* Employee Info Section */
+.employee-info {
+  margin-bottom: 20px;
+}
+
+.employee-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000;
+}
+
+.employee-info strong {
+  color: black;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.update-button,
+.delete-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 48%;
+}
+
+.update-button {
+  background: #4caf50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+}
+
+.update-button:hover {
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background: #f44336;
+  color: white;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+}
+
+.delete-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .employee-card2 {
+    padding: 20px;
+  }
+
+  .employee-info p {
+    font-size: 1rem;
+  }
+
+  .employee-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .update-button,
+  .delete-button {
+    width: 100%;
+  }
+}
+
+/* Responsive Design for Very Small Devices */
+@media screen and (max-width: 480px) {
+  .employee-card2 {
+    padding: 15px;
+  }
+
+  .employee-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .employee-info p {
+    font-size: 0.9rem;
+  }
+
+  .update-button,
+  .delete-button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
