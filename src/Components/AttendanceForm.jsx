@@ -13,7 +13,7 @@ const AttendanceForm = () => {
         e.preventDefault();
 
         await api
-            .post(`http://localhost:8080/api/attendance/mark/${employeeId}?status=${status}`)
+            .post(`api/attendance/mark/${employeeId}?status=${status}`)
             .then((response) => {
                 setToast({ message: 'Attendance marked successfully!', type: 'success' });
             })
